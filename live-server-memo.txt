@@ -1,0 +1,4 @@
+Per avere un php che si refresha con Live Server:
+configura l'estensione di Mozilla Live Server in modo da indicare
+prima l'indirizzo del server Apache (http://localhost) e poi
+quello dove runna Live Server

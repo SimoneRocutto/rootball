@@ -33,7 +33,7 @@ select {
   font: inherit;
 }
 
-a {
+h1, h2, h3, h4, h5, h6, p, span, div, a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -41,22 +41,47 @@ a {
   #NAVBAR-STYLING
 \*-----------------------------------*/
 .navbar {
-  position: fixed;
   width: 100vw;
   background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.navbar__ul {
+.navlist {
+  padding: 0;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   list-style: none;
+  margin-inline: 3rem;
+  width: 70%;
+  white-space: nowrap;
 }
 
-.navbar__li {
+.navlist__li {
   margin-inline: 0.5rem;
 }
 
-.navbar__a {
+.navlist__a {
   color: #eee;
   text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar__logo-a {
+  display: block;
+  height: 6rem;
+  margin-block: 1rem;
+  margin-inline: 3rem;
+}
+
+.navbar__logo-a svg {
+  width: auto;
+  height: 100%;
+}
+.navbar__logo-a svg > g {
+  fill: white;
 }/*# sourceMappingURL=style.css.map */
