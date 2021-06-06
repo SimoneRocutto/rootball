@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+/*-----------------------------------*\
+  #NAVBAR-STYLING
+\*-----------------------------------*/
+.navbar {
+  position: fixed;
+  width: 100vw;
+  background: #333;
+}
+
+.navbar__ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar__li {
+  margin-inline: 0.5rem;
+}
+
+.navbar__a {
+  color: #eee;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
