@@ -1,5 +1,6 @@
 // base contains global styles that affect everything
 
-@forward '_font-imports.scss';
-@forward '_reset.scss';
-@forward '_typography.scss';
+@forward 'font-imports';
+@forward 'reset';
+@forward 'root';
+@forward 'typography';

@@ -11,10 +11,13 @@
 
 <body>
   <nav class="navbar">
-    <a class="navbar__logo-a" href="#">
-        <?php echo file_get_contents('../images/svg/logo-black.svg'); ?>
+    <a class="navbar__logo" href="#">
+      <?php echo file_get_contents('../images/svg/logo-black.svg'); ?>
+      <div class="logo__word">Rootball</div>
+
     </a>
-    <ul class="navlist">
+    <button class="navbar__toggle" id="navbar-toggle"></button>
+    <ul class="navlist navlist-collapsed" id="nav-list">
       <li class="navlist__li"><a href="./" class="navlist__a">Home</a></li>
       <li class="navlist__li"><a href="./rules.php" class="navlist__a">Rules</a></li>
       <li class="navlist__li"><a href="./about.php" class="navlist__a">About</a></li>

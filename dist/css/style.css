@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 *::before,
 *::after {
@@ -33,20 +33,116 @@ select {
   font: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, div, a {
-  font-family: "Roboto", sans-serif;
+:root {
+  --clr-primary-50: #fff8e0;
+  --clr-primary-100: #ffecb3;
+  --clr-primary-200: #ffe085;
+  --clr-primary-300: #ffd752;
+  --clr-primary-400: #ffcc33;
+  --clr-primary-500: #ffc21a;
+  --clr-primary-600: #ffb514;
+  --clr-primary-700: #fea116;
+  --clr-primary-800: #fe9310;
+  --clr-primary-900: #fe7310;
+  --clr-secondary-50: #ebedff;
+  --clr-secondary-100: #c7ceff;
+  --clr-secondary-200: #a3afff;
+  --clr-secondary-300: #758fff;
+  --clr-secondary-400: #5274ff;
+  --clr-secondary-500: #1a57ff;
+  --clr-secondary-600: #1651f3;
+  --clr-secondary-700: #0045e6;
+  --clr-secondary-800: #0037db;
+  --clr-secondary-900: #001fcc;
+  --clr-neutral-300: white;
+  --clr-neutral-700: gray;
+  --clr-neutral-800: #4d4d4d;
+  --clr-neutral-900: black;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media only screen and (min-width: 40em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+  }
 }
 
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, span, div, a {
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-neutral-900);
+}
+
+p, li {
+  font-size: var(--fs-400);
+}
+
+h6 {
+  font-size: var(--fs-400);
+}
+
+h5 {
+  font-size: var(--fs-500);
+}
+
+h4 {
+  font-size: var(--fs-500);
+}
+
+h3 {
+  font-size: var(--fs-600);
+}
+
+h2 {
+  font-size: var(--fs-700);
+}
+
+h1 {
+  font-size: var(--fs-800);
+}
+
+/*-----------------------------------*\
+  #BUTTON-STYLING
+\*-----------------------------------*/
 /*-----------------------------------*\
   #NAVBAR-STYLING
 \*-----------------------------------*/
 .navbar {
-  width: 100vw;
-  background: #333;
-  display: flex;
+  min-width: 100%;
+  background: var(--clr-primary-600);
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+}
+@media only screen and (max-width: 65em) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+
+.navbar__toggle {
+  background-image: url(../images/svg/Hamburger_icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  border: transparent;
+  height: 3rem;
+  width: 3rem;
+  margin-inline: 3rem;
+}
+@media only screen and (min-width: 65em) {
+  .navbar__toggle {
+    display: none;
+  }
 }
 
 .navlist {
@@ -56,32 +152,95 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  margin-inline: 3rem;
+  margin-right: 3rem;
   width: 70%;
   white-space: nowrap;
+}
+@media only screen and (max-width: 65em) {
+  .navlist {
+    flex-direction: column;
+    align-items: unset;
+    margin-left: 3rem;
+    margin-block: 0;
+    position: relative;
+    transition: height 0.35s ease;
+  }
+  .navlist.navlist-collapsed {
+    overflow: hidden;
+    height: 0;
+  }
 }
 
 .navlist__li {
   margin-inline: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .navlist__a {
-  color: #eee;
+  color: var(--clr-neutral-900);
   text-decoration: none;
   font-size: 1.5rem;
 }
 
-.navbar__logo-a {
-  display: block;
+.navbar__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 6rem;
   margin-block: 1rem;
-  margin-inline: 3rem;
+  margin-left: 3rem;
+  text-decoration: none;
 }
 
-.navbar__logo-a svg {
+.logo__word {
+  margin-inline: 2rem;
+  color: var(--clr-neutral-900);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+@media only screen and (max-width: 30em) {
+  .logo__word {
+    display: none;
+  }
+}
+
+.navbar__logo svg {
   width: auto;
   height: 100%;
 }
-.navbar__logo-a svg > g {
-  fill: white;
+.navbar__logo svg > g {
+  fill: var(--clr-neutral-900);
+}
+
+.wrapper {
+  max-width: 60em;
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+  padding-top: 1rem;
+}
+
+section {
+  margin-block: 1rem;
+}
+
+.section__title {
+  margin-block: 1rem;
+  font-weight: 500;
+}
+
+.rules-group__title {
+  counter-reset: rules-counter;
+  counter-increment: rules-group-counter;
+}
+.rules-group__title::before {
+  content: counter(rules-group-counter) " - ";
+}
+
+.rule {
+  list-style-type: none;
+}
+.rule::before {
+  counter-increment: rules-counter;
+  content: counter(rules-group-counter) "." counter(rules-counter) ": ";
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

@@ -1,14 +1,36 @@
+@use '../abstracts' as *;
+
 /*-----------------------------------*\
   #NAVBAR-STYLING
 \*-----------------------------------*/
 
 .navbar {
-  width: 100vw;
-  background: #333;
-  display: flex;
+  min-width: 100%;
+  background: var(--clr-primary-600);
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+
+  // position: relative;
+  @include max-mq(medium) {
+    flex-wrap: wrap;
+  }
+}
+
+.navbar__toggle {
+  background-image: url(../images/svg/Hamburger_icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  border: transparent;
+  height: 3rem;
+  width: 3rem;
+  margin-inline: 3rem;
+
+  @include min-mq(medium) {
+    display: none;
+  }
 }
 
 .navlist {
@@ -18,32 +40,62 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  margin-inline: 3rem;
+  margin-right: 3rem;
   width: 70%;
   white-space: nowrap;
+
+    @include max-mq(medium) {
+      flex-direction: column;
+      align-items: unset;
+      margin-left: 3rem;
+      margin-block: 0;
+      position: relative;
+      transition: height 0.35s ease;
+
+      &.navlist-collapsed {
+        overflow: hidden;
+        height: 0;
+        // display: none;
+      }
+  }
 }
 
 .navlist__li {
   margin-inline: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .navlist__a {
-  color: #eee;
+  color: var(--clr-neutral-900);
   text-decoration: none;
   font-size: 1.5rem;
 }
 
-.navbar__logo-a {
-  display: block;
+.navbar__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 6rem;
   margin-block: 1rem;
-  margin-inline: 3rem;
+  margin-left: 3rem;
+  text-decoration: none;
 }
 
-.navbar__logo-a svg {
+.logo__word {
+  margin-inline: 2rem;
+  color: var(--clr-neutral-900);
+  font-size: 2.5rem;
+  font-weight: 300;
+
+  @include max-mq(extra-small) {
+    display: none;
+  }
+}
+
+.navbar__logo svg {
   width: auto;
   height: 100%;
   &>g {
-    fill: white;
+    fill: var(--clr-neutral-900);
   }
 }
