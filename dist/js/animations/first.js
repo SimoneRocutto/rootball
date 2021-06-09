@@ -16,9 +16,12 @@ const firstParagraph = document.getElementById("first-intro-paragraph");
 const secondParagraph = document.getElementById("second-intro-paragraph");
 const downArrow = document.getElementById("second-slide__btn-box");
 homeCta === null || homeCta === void 0 ? void 0 : homeCta.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
-    homeWrapperBefore === null || homeWrapperBefore === void 0 ? void 0 : homeWrapperBefore.classList.add("full-size");
-    navbar === null || navbar === void 0 ? void 0 : navbar.classList.remove("hidden");
-    yield timeout(700);
+    // this if statement avoids the useless wait if the animation has already happened once
+    if (navbar === null || navbar === void 0 ? void 0 : navbar.classList.contains("hidden")) {
+        homeWrapperBefore === null || homeWrapperBefore === void 0 ? void 0 : homeWrapperBefore.classList.add("full-size");
+        navbar === null || navbar === void 0 ? void 0 : navbar.classList.remove("hidden");
+        yield timeout(700);
+    }
     window.scroll(0, window.innerHeight);
     title === null || title === void 0 ? void 0 : title.classList.remove("slided-out");
     yield timeout(500);

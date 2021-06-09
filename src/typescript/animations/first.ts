@@ -9,9 +9,12 @@ const secondParagraph = document.getElementById("second-intro-paragraph")
 const downArrow = document.getElementById("second-slide__btn-box")
 
 homeCta?.addEventListener("click", async () => {
-    homeWrapperBefore?.classList.add("full-size")
-    navbar?.classList.remove("hidden")
-    await timeout(700)
+    // this if statement avoids the useless wait if the animation has already happened once
+    if (navbar?.classList.contains("hidden")) {
+        homeWrapperBefore?.classList.add("full-size")
+        navbar?.classList.remove("hidden")
+        await timeout(700)
+    }
     window.scroll(0, window.innerHeight)
     title?.classList.remove("slided-out")
     await timeout(500)
