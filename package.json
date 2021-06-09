@@ -1,0 +1,25 @@
+{
+  "name": "rootball",
+  "version": "1.0.0",
+  "description": "Rootball Official Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimoneRocutto/rootball.git"
+  },
+  "keywords": [
+    "rootball"
+  ],
+  "author": "Simone Rocutto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimoneRocutto/rootball/issues"
+  },
+  "homepage": "https://github.com/SimoneRocutto/rootball#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
+}

@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/style.css" />
   <title>Rootball Official Site</title>
+
+  <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css"></script>
 </head>
 
 <body>
   <div class="main-wrapper">
-    <nav class="navbar">
+    <nav class="navbar hidden transition-opacity" id="navbar">
       <a class="navbar__logo" href="./">
         <?php echo file_get_contents('../images/svg/logo-black.svg'); ?>
         <div class="logo__word">Rootball</div>

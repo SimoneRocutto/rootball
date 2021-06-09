@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -81,7 +85,7 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, span, div, a {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, span, div, a, button {
   font-family: "Roboto", sans-serif;
   color: var(--clr-neutral-900);
 }
@@ -114,6 +118,23 @@ h1 {
   font-size: var(--fs-800);
 }
 
+.hidden {
+  z-index: -100 !important;
+  opacity: 0 !important;
+}
+
+.slided-out {
+  transform: translateX(-100vw);
+}
+
+.transition-opacity {
+  transition: opacity 1s ease;
+}
+
+.transition-transform {
+  transition: transform 1s ease;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -123,6 +144,10 @@ body {
 /*-----------------------------------*\
   #BUTTON-STYLING
 \*-----------------------------------*/
+button {
+  cursor: pointer;
+}
+
 .cta-button {
   padding-inline: 2rem;
   padding-block: 0.7rem;
@@ -147,10 +172,12 @@ body {
 \*-----------------------------------*/
 .navbar {
   min-width: 100%;
-  background: var(--clr-primary-600);
+  background: rgba(0, 0, 0, 0.7);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  z-index: 10;
 }
 @media only screen and (max-width: 65em) {
   .navbar {
@@ -208,7 +235,7 @@ body {
 }
 
 .navlist__a {
-  color: var(--clr-neutral-900);
+  color: var(--clr-neutral-300);
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -225,7 +252,7 @@ body {
 
 .logo__word {
   margin-inline: 2rem;
-  color: var(--clr-neutral-900);
+  color: var(--clr-neutral-300);
   font-size: 2.5rem;
   font-weight: 300;
 }
@@ -240,7 +267,7 @@ body {
   height: 100%;
 }
 .navbar__logo svg > g {
-  fill: var(--clr-neutral-900);
+  fill: var(--clr-neutral-300);
 }
 
 .main-wrapper {
@@ -249,26 +276,134 @@ body {
   flex-direction: column;
 }
 
+.slide-wrapper {
+  min-height: 100vh;
+}
+
 .home-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  background: var(--clr-primary-100);
+  background: var(--clr-primary-800);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/trees-very-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: circle(0%);
+          clip-path: circle(0%);
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+}
+
+.home-wrapper.full-size::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
 }
 
 .home-title {
-  line-height: var(--fs-800);
-  margin-top: 4rem;
+  color: transparent;
+  line-height: 18vh;
+  font-size: 22vh;
+  background: url(../images/trees-very-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 100vh;
+}
+@media only screen and (max-width: 40em) {
+  .home-title {
+    font-size: 10vh;
+  }
 }
 
-.home-subtitle {
-  font-size: var(--fs-100);
-  margin-top: 8rem;
+.cta-box {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  margin-top: 70vh;
+  z-index: 10;
 }
 
 .cta-button {
-  margin-top: 5rem;
+  height: 3rem;
+}
+
+.home-subtitle-box {
+  z-index: 10;
+  margin-top: 14vh;
+}
+
+.home-subtitle {
+  color: var(--clr-neutral-300);
+  font-size: var(--fs-100);
+}
+
+.intro-wrapper {
+  background: var(--clr-neutral-800);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-title-box {
+  margin-top: 30vh;
+}
+
+.intro-title {
+  color: var(--clr-neutral-300);
+  line-height: 18vh;
+  font-size: 22vh;
+}
+@media only screen and (max-width: 65em) {
+  .intro-title {
+    font-size: 14vh;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .intro-title {
+    font-size: 9vh;
+  }
+}
+
+.intro-text-box {
+  margin-top: 15vh;
+  align-self: center;
+}
+
+.intro-paragraph {
+  color: var(--clr-neutral-300);
+  margin-bottom: 1vh;
+}
+
+.second-slide__btn-box {
+  margin-top: 7vh;
+  align-self: center;
+}
+
+.second-slide__btn {
+  background: transparent;
+  border: none;
+  color: var(--clr-neutral-300);
+  font-size: 3rem;
 }
 
 .content-wrapper {

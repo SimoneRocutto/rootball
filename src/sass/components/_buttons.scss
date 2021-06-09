@@ -2,6 +2,10 @@
   #BUTTON-STYLING
 \*-----------------------------------*/
 
+button {
+  cursor: pointer;
+}
+
 .cta-button {
   padding-inline: 2rem;
   padding-block: 0.7rem;
