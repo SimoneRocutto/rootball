@@ -11,11 +11,12 @@
   align-items: center;
   justify-content: space-between;
 
-  // position: relative;
   @include max-mq(medium) {
     flex-wrap: wrap;
   }
 }
+
+// hamburger icon (button)
 
 .navbar__toggle {
   background-image: url(../images/svg/Hamburger_icon.svg);
@@ -32,6 +33,8 @@
     display: none;
   }
 }
+
+// ul element
 
 .navlist {
   padding: 0;
@@ -55,7 +58,7 @@
       &.navlist-collapsed {
         overflow: hidden;
         height: 0;
-        // display: none;
+        display: none;
       }
   }
 }
@@ -70,6 +73,8 @@
   text-decoration: none;
   font-size: 1.5rem;
 }
+
+// logo container (a)
 
 .navbar__logo {
   display: flex;
@@ -91,6 +96,8 @@
     display: none;
   }
 }
+
+// logo svg styling
 
 .navbar__logo svg {
   width: auto;

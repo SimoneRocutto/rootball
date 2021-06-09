@@ -1,7 +1,7 @@
 <?php
 require('../partials/header.php');
 ?>
-<div class="wrapper">
+<div class="content-wrapper">
     <section>
         <h3 class="section__title">Game overview</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi atque voluptate delectus? Consequuntur ullam velit voluptatem aliquid ea rem, quaerat eveniet modi sed aspernatur error dolorum delectus, similique illum repellat!

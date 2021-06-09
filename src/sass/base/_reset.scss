@@ -33,6 +33,12 @@ select {
   font: inherit;
 }
 
+// lets the navbar not rearrange layout when sidebar is not needed
+
+html {
+  overflow-y: scroll;
+}
+
 
 // img {
 //     max-width: 100%;

@@ -1,3 +1,12 @@
 /*-----------------------------------*\
   #BUTTON-STYLING
 \*-----------------------------------*/
+
+.cta-button {
+  padding-inline: 2rem;
+  padding-block: 0.7rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(91, 11, 165);
+  color: var(--clr-neutral-300);
+}
