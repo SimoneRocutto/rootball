@@ -14,6 +14,7 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
   justify-content: space-between;
   position: absolute;
   z-index: 10;
+  height: 8rem;
 
   @include max-mq(medium) {
     flex-wrap: wrap;
@@ -23,10 +24,6 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
 // hamburger icon (button)
 
 .navbar__toggle {
-  background-image: url(../images/svg/Hamburger_icon.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   background-color: transparent;
   border: transparent;
   height: 3rem;
@@ -35,6 +32,42 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
 
   @include min-mq(medium) {
     display: none;
+  }
+}
+
+.toggle__lines {
+  display: flex;
+  width: 2.5rem;
+  height: 0.3rem;
+  border-radius: 3px;
+  background-color: var(--clr-neutral-300);
+  transition: all 0.5s ease;
+
+  &::before, &::after {
+    content: '';
+    border-radius: inherit;
+    background-color: inherit;
+    transition: inherit;
+    position: absolute;
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+  }
+  &::before {
+    transform: translateY(-0.7rem);
+  }
+  &::after {
+    transform: translateY(0.7rem);
+  }
+}
+
+.navlist-is-open .toggle__lines {
+  width: 0;
+  &::before {
+    transform: rotateZ(45deg);
+  }
+  &::after {
+    transform: rotateZ(-45deg);
   }
 }
 
@@ -47,23 +80,35 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  margin-right: 3rem;
-  width: 70%;
+  padding-right: 3rem;
+  width: 100%;
   white-space: nowrap;
-
-    @include max-mq(medium) {
+  z-index: -1;
+  
+  // small screen navbar styles
+  @include max-mq(medium) {
+      background: mix($navbarBackground, transparent, 70%);
       flex-direction: column;
       align-items: unset;
-      margin-left: 3rem;
+      padding-left: 3rem;
       margin-block: 0;
       position: relative;
-      transition: height 0.35s ease;
+      overflow: hidden;
 
-      &.navlist-collapsed {
-        overflow: hidden;
-        height: 0;
-        display: none;
-      }
+      // navlist closing transition
+      transition: transform, opacity 0.3s ease-out;
+      transition-delay: 0.3s, 0s; // navlist first fades out, then slides up
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+}
+
+.navlist-is-open .navlist {
+  @include max-mq(medium) {
+    // navlist opening transition
+    transition: transform, opacity 0.3s ease-out;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

@@ -178,6 +178,7 @@ button {
   justify-content: space-between;
   position: absolute;
   z-index: 10;
+  height: 8rem;
 }
 @media only screen and (max-width: 65em) {
   .navbar {
@@ -186,10 +187,6 @@ button {
 }
 
 .navbar__toggle {
-  background-image: url(../images/svg/Hamburger_icon.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   background-color: transparent;
   border: transparent;
   height: 3rem;
@@ -202,6 +199,41 @@ button {
   }
 }
 
+.toggle__lines {
+  display: flex;
+  width: 2.5rem;
+  height: 0.3rem;
+  border-radius: 3px;
+  background-color: var(--clr-neutral-300);
+  transition: all 0.5s ease;
+}
+.toggle__lines::before, .toggle__lines::after {
+  content: "";
+  border-radius: inherit;
+  background-color: inherit;
+  transition: inherit;
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+}
+.toggle__lines::before {
+  transform: translateY(-0.7rem);
+}
+.toggle__lines::after {
+  transform: translateY(0.7rem);
+}
+
+.navlist-is-open .toggle__lines {
+  width: 0;
+}
+.navlist-is-open .toggle__lines::before {
+  transform: rotateZ(45deg);
+}
+.navlist-is-open .toggle__lines::after {
+  transform: rotateZ(-45deg);
+}
+
 .navlist {
   padding: 0;
   display: flex;
@@ -209,23 +241,32 @@ button {
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  margin-right: 3rem;
-  width: 70%;
+  padding-right: 3rem;
+  width: 100%;
   white-space: nowrap;
+  z-index: -1;
 }
 @media only screen and (max-width: 65em) {
   .navlist {
+    background: rgba(0, 0, 0, 0.7);
     flex-direction: column;
     align-items: unset;
-    margin-left: 3rem;
+    padding-left: 3rem;
     margin-block: 0;
     position: relative;
-    transition: height 0.35s ease;
-  }
-  .navlist.navlist-collapsed {
     overflow: hidden;
-    height: 0;
-    display: none;
+    transition: transform, opacity 0.3s ease-out;
+    transition-delay: 0.3s, 0s;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 65em) {
+  .navlist-is-open .navlist {
+    transition: transform, opacity 0.3s ease-out;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
