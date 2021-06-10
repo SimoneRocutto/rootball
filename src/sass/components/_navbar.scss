@@ -35,6 +35,8 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
   }
 }
 
+// hamburger icon style
+
 .toggle__lines {
   display: flex;
   width: 2.5rem;
@@ -60,6 +62,8 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
     transform: translateY(0.7rem);
   }
 }
+
+// transition from hamburger to cross
 
 .dropdown-is-open .toggle__lines {
   width: 0;
@@ -96,24 +100,23 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
       overflow: hidden;
 
       // navlist closing transition
-      transition: transform, opacity 0.3s ease-out;
-      transition-delay: 0.3s, 0s; // navlist first fades out, then slides up
-      transform: translateY(-100%);
+      transition: opacity 0.3s ease-out;
       opacity: 0;
   }
 }
 
+// this class is applied only after 0.3s 
+// from the click on the cross icon have passed
 .dropdown-is-hidden .navlist {
   @include max-mq(medium) {
     display: none;
   }
 }
 
+// navlist opening transition
 .dropdown-is-open .navlist {
   @include max-mq(medium) {
-    // navlist opening transition
-    transition: transform, opacity 0.3s ease-out;
-    transform: translateY(0);
+    transition: opacity 0.3s ease-out;
     opacity: 1;
   }
 }

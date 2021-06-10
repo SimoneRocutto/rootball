@@ -255,9 +255,7 @@ button {
     margin-block: 0;
     position: relative;
     overflow: hidden;
-    transition: transform, opacity 0.3s ease-out;
-    transition-delay: 0.3s, 0s;
-    transform: translateY(-100%);
+    transition: opacity 0.3s ease-out;
     opacity: 0;
   }
 }
@@ -270,8 +268,7 @@ button {
 
 @media only screen and (max-width: 65em) {
   .dropdown-is-open .navlist {
-    transition: transform, opacity 0.3s ease-out;
-    transform: translateY(0);
+    transition: opacity 0.3s ease-out;
     opacity: 1;
   }
 }
