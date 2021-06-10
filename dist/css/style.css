@@ -280,7 +280,7 @@ button {
   min-height: 100vh;
 }
 
-.home-wrapper {
+.landing-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,7 +289,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.home-wrapper::before {
+.landing-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -299,19 +299,19 @@ button {
   background: url(../images/trees-very-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-clip-path: circle(0%);
-          clip-path: circle(0%);
+  -webkit-clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
   transition: -webkit-clip-path 1s ease;
   transition: clip-path 1s ease;
   transition: clip-path 1s ease, -webkit-clip-path 1s ease;
 }
 
-.home-wrapper.full-size::before {
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+.landing-wrapper.full-size::before {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.home-title {
+.landing-title {
   color: transparent;
   line-height: 18vh;
   font-size: 22vh;
@@ -330,7 +330,7 @@ button {
   line-height: 100vh;
 }
 @media only screen and (max-width: 40em) {
-  .home-title {
+  .landing-title {
     font-size: 10vh;
   }
 }
@@ -347,25 +347,30 @@ button {
   height: 3rem;
 }
 
-.home-subtitle-box {
+.landing-subtitle-box {
   z-index: 10;
   margin-top: 14vh;
 }
 
-.home-subtitle {
+.landing-subtitle {
   color: var(--clr-neutral-300);
   font-size: var(--fs-100);
 }
 
 .intro-wrapper {
   background: var(--clr-neutral-800);
-  padding-left: 2rem;
+  padding-inline: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .intro-title-box {
   margin-top: 30vh;
+}
+@media only screen and (max-width: 30em) {
+  .intro-title-box {
+    align-self: center;
+  }
 }
 
 .intro-title {
@@ -381,6 +386,11 @@ button {
 @media only screen and (max-width: 40em) {
   .intro-title {
     font-size: 9vh;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .intro-title {
+    font-size: 6vh;
   }
 }
 
