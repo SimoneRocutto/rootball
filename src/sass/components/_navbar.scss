@@ -103,7 +103,13 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
   }
 }
 
-.navlist-is-open .navlist {
+.dropdown-is-hidden .navlist {
+  @include max-mq(medium) {
+    display: none;
+  }
+}
+
+.dropdown-is-open .navlist {
   @include max-mq(medium) {
     // navlist opening transition
     transition: transform, opacity 0.3s ease-out;

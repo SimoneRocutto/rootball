@@ -263,7 +263,13 @@ button {
 }
 
 @media only screen and (max-width: 65em) {
-  .navlist-is-open .navlist {
+  .dropdown-is-hidden .navlist {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 65em) {
+  .dropdown-is-open .navlist {
     transition: transform, opacity 0.3s ease-out;
     transform: translateY(0);
     opacity: 1;

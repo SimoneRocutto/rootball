@@ -13,7 +13,7 @@
 
 <body>
   <div class="main-wrapper">
-    <nav class="navbar hidden transition-opacity" id="navbar">
+    <nav class="navbar transition-opacity dropdown-is-hidden" id="navbar">
       <a class="navbar__logo" href="./">
         <?php echo file_get_contents('../images/svg/logo-black.svg'); ?>
         <div class="logo__word">Rootball</div>
