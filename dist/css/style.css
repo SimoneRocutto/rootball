@@ -224,13 +224,13 @@ button {
   transform: translateY(0.7rem);
 }
 
-.navlist-is-open .toggle__lines {
+.dropdown-is-open .toggle__lines {
   width: 0;
 }
-.navlist-is-open .toggle__lines::before {
+.dropdown-is-open .toggle__lines::before {
   transform: rotateZ(45deg);
 }
-.navlist-is-open .toggle__lines::after {
+.dropdown-is-open .toggle__lines::after {
   transform: rotateZ(-45deg);
 }
 

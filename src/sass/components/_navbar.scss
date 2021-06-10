@@ -61,7 +61,7 @@ $navbarBackground: map-get(map-get($colors, neutral), 900);
   }
 }
 
-.navlist-is-open .toggle__lines {
+.dropdown-is-open .toggle__lines {
   width: 0;
   &::before {
     transform: rotateZ(45deg);
