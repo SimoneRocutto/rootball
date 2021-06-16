@@ -1,4 +1,4 @@
-import { timeout } from '../functions/index.js'
+import { timeout } from '../functions/index'
 
 const landingWrapperBefore = document.getElementById("landing-wrapper")
 const navbar = document.getElementById("navbar")

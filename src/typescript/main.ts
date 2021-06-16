@@ -1,3 +1,5 @@
-import './components/index.js'
-import './functions/index.js'
-import './animations/index.js'
+import '../sass/style.scss'
+
+import './components/index'
+import './functions/index'
+import './animations/index'

@@ -1,6 +1,6 @@
 // header-navbar toggling event listener
 
-import { timeout } from '../functions/index.js'
+import { timeout } from '../functions/index'
 
 const navbarToggle = document.getElementById("navbar-toggle")
 const navbar = document.getElementById("navbar")

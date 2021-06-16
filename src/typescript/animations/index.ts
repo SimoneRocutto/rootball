@@ -1,3 +1,3 @@
-import './first.js'
-import './second.js'
-import './third.js'
+import './first'
+import './second'
+import './third'

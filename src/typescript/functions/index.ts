@@ -1,1 +1,1 @@
-export { timeout } from './timeout.js'
+export { timeout } from './timeout'

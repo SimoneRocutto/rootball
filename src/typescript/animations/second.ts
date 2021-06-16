@@ -1,4 +1,4 @@
-import { timeout } from '../functions/index.js'
+import { timeout } from '../functions/index'
 
 const downArrow = document.getElementById("second-slide__btn-box")
 
