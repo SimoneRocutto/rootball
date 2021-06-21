@@ -1,4 +1,4 @@
-export function timeout(time: number) {
+export function timeout(time) {
     return new Promise((resolve) => {
         setTimeout(resolve, time)
     })

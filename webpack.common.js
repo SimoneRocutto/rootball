@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-        entry: './src/typescript/main.ts',
+        entry: './src/js/main.js',
         output: {
             filename: 'main.js',
             path: path.resolve(__dirname, 'dist')
@@ -12,10 +12,6 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
-            },
-            {
-                test: /\.ts$/,
-                use: 'ts-loader'
             },
             {
                 test: /\.scss$/i,

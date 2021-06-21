@@ -44,6 +44,10 @@
   text-align: center;
   line-height: 100vh;
 
+  @include max-mq(medium) {
+    font-size: 15vh;
+  }
+
   @include max-mq(small) {
     font-size: 10vh;
   }
