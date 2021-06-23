@@ -11,8 +11,6 @@
   &::before {
     content: "";
     position: absolute;
-    // top: 0;
-    // bottom: 0;
     height: 100vh;
     left: 0;
     right: 0;
@@ -62,16 +60,16 @@
   align-items: center;
   justify-content: center;
   margin-top: 70vh;
-  z-index: 10;
 }
 
 .cta-button {
   height: 3rem;
-  z-index: 100;
+}
+.cta-button.through-overlay {
+  z-index: 10;
 }
 
 .landing-subtitle-box {
-  z-index: 10;
   margin-top: 14vh;
 }
 

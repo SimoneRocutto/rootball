@@ -13,6 +13,7 @@ const downArrow = document.getElementById("second-slide__btn-box")
 landingCta?.addEventListener("click", async () => {
     // this if statement avoids the useless wait if the animation has already happened once
     if (navbar?.classList.contains("hidden")) {
+        landingCta?.classList.remove("through-overlay")
         landingWrapperBefore?.classList.add("full-size")
         navbar?.classList.remove("hidden")
         await timeout(700)
