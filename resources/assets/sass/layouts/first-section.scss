@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.landing-wrapper {
+.sec-1-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,11 +22,11 @@
   }
 }
 
-.landing-wrapper.full-size::before {
+.sec-1-wrapper.full-size::before {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.landing-title {
+.sec-1-title {
   color: transparent;
   line-height: 18vh;
   font-size: 22vh;
@@ -69,11 +69,11 @@
   z-index: 10;
 }
 
-.landing-subtitle-box {
+.sec-1-subtitle-box {
   margin-top: 14vh;
 }
 
-.landing-subtitle {
+.sec-1-subtitle {
   color: var(--clr-neutral-300);
   font-size: var(--fs-100);
 }

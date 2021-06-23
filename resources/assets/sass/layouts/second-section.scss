@@ -1,20 +1,20 @@
 @use '../abstracts' as *;
 
-.intro-wrapper {
+.sec-2-wrapper {
   background: var(--clr-neutral-800);
   padding-inline: 2rem;
   display: flex;
   flex-direction: column;
 }
 
-.intro-title-box {
+.sec-2-title-box {
   margin-top: 30vh;
   @include max-mq(extra-small) {
     align-self: center;
   }
 }
 
-.intro-title {
+.sec-2-title {
   color: var(--clr-neutral-300);
   line-height: 18vh;
   font-size: 17vh;
@@ -31,17 +31,17 @@
   }
 }
 
-.intro-text-box {
+.sec-2-text-box {
   margin-top: 15vh;
   align-self: center;
 }
 
-.intro-paragraph {
+.sec-2-paragraph {
   color: var(--clr-neutral-300);
   margin-bottom: 1vh;
 }
 
-.second-slide__btn-box {
+.sec-2-btn-box {
   margin-top: 7vh;
   // align-self: center;
   display: flex;
@@ -49,7 +49,7 @@
   flex-direction: column;
 }
 
-.second-slide__btn {
+.sec-2-btn {
   background: transparent;
   border: none;
   color: var(--clr-neutral-300);

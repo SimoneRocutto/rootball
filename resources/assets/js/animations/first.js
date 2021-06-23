@@ -2,14 +2,14 @@ import { timeout } from '../functions/index'
 import { myFullpage } from '../packages'
 export { firstToSecondTransition }
 
-const landingWrapperBefore = document.getElementById("landing-wrapper")
+const landingWrapperBefore = document.getElementById("sec-1-wrapper")
 const navbar = document.getElementById("navbar")
-const landingCta = document.getElementById("landing-cta")
-const landingTitle = document.getElementById("landing-title")
-const title = document.getElementById("intro-title")
-const firstParagraph = document.getElementById("first-intro-paragraph")
-const secondParagraph = document.getElementById("second-intro-paragraph")
-const downArrow = document.getElementById("second-slide__btn-box")
+const landingCta = document.getElementById("sec-1-cta")
+const landingTitle = document.getElementById("sec-1-title")
+const title = document.getElementById("sec-2-title")
+const firstParagraph = document.getElementById("sec-2-first-paragraph")
+const secondParagraph = document.getElementById("sec-2-second-paragraph")
+const downArrow = document.getElementById("sec-2-btn-box")
 
 landingCta?.addEventListener("click", firstToSecondTransition)
 
