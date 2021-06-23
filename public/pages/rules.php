@@ -1,5 +1,5 @@
 <?php
-require('../partials/header.php');
+require('../../resources/partials/header.php');
 ?>
 <div class="content-wrapper">
     <section>
@@ -36,4 +36,4 @@ require('../partials/header.php');
     </section>
 </div>
 <?php
-require('../partials/footer.php');
+require('../../resources/partials/footer.php');

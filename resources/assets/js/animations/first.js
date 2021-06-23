@@ -1,4 +1,5 @@
 import { timeout } from '../functions/index'
+import { myFullpage } from '../packages'
 
 const landingWrapperBefore = document.getElementById("landing-wrapper")
 const navbar = document.getElementById("navbar")
@@ -17,7 +18,8 @@ landingCta?.addEventListener("click", async () => {
         await timeout(700)
         landingTitle?.classList.add("hidden")
     }
-    window.scroll(0, window.innerHeight)
+    // window.scroll(0, window.innerHeight)
+    myFullpage.moveSectionDown()
     title?.classList.remove("slided-out")
     await timeout(500)
     firstParagraph?.classList.remove("slided-out")

@@ -1,0 +1,1 @@
+export { myFullpage } from './fullpage'

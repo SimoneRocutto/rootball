@@ -11,8 +11,9 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    // top: 0;
+    // bottom: 0;
+    height: 100vh;
     left: 0;
     right: 0;
     background: url(../images/trees-very-dark.jpg);
@@ -35,10 +36,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: text;
+  -webkit-background-clip: text; // necessary for chrome
   position: absolute;
   z-index: 1;
-  top: 0;
-  bottom: 0;
+  // top: 0;
+  // bottom: 0;
+  height: 100vh;
   left: 0;
   right: 0;
   text-align: center;
@@ -57,12 +60,14 @@
   height: 7vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 70vh;
   z-index: 10;
 }
 
 .cta-button {
   height: 3rem;
+  z-index: 100;
 }
 
 .landing-subtitle-box {

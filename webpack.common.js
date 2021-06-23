@@ -1,12 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-        entry: './src/js/main.js',
-        output: {
-            filename: 'main.js',
-            path: path.resolve(__dirname, 'dist')
-        },
+    entry: './resources/assets/js/main.js',
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'public')
+    },
     module: {
         rules: [
             {
@@ -20,6 +19,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.ts', '.tsx', '.js' ]
+        extensions: ['.ts', '.tsx', '.js']
     }
 }
