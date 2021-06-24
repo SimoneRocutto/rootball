@@ -7,9 +7,9 @@ const navbar = document.getElementById("navbar")
 const landingCta = document.getElementById("sec-1-cta")
 const landingTitle = document.getElementById("sec-1-title")
 const title = document.getElementById("sec-2-title")
-const firstParagraph = document.getElementById("sec-2-first-paragraph")
-const secondParagraph = document.getElementById("sec-2-second-paragraph")
-const downArrow = document.getElementById("sec-2-btn-box")
+const firstParagraph = document.getElementById("sec-2-par-1")
+const secondParagraph = document.getElementById("sec-2-par-2")
+const downArrowBox = document.getElementById("sec-2-btn-box")
 
 landingCta?.addEventListener("click", firstToSecondTransition)
 
@@ -27,5 +27,5 @@ async function firstToSecondTransition() {
     await timeout(500)
     secondParagraph?.classList.remove("slided-out")
     await timeout(700)
-    downArrow?.classList.remove("slided-out")
+    downArrowBox?.classList.remove("slided-out")
 }

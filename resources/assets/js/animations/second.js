@@ -2,7 +2,7 @@ import { timeout } from '../functions/index'
 import { myFullpage } from '../packages'
 export { secondToThirdTransition }
 
-const downArrow = document.getElementById("sec-2-btn-box")
+const downArrow = document.getElementById("sec-2-btn")
 const sec3Title = document.getElementById("sec-3-title")
 const sec3Par1 = document.getElementById("sec-3-par-1")
 const sec3Par2 = document.getElementById("sec-3-par-2")
